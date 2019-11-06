@@ -162,11 +162,11 @@ def sharpen(srcImg):
     dstImg = cv2.filter2D(srcImg,-1,kernel)
     return dstImg
 if __name__=="__main__":
-    srcImg = cv2.imread("E:\\tuwee\\imgaug\\resources\\8.jpg")
-    srcImg2 = cv2.imread("E:\\tuwee\\imgaug\\resources\\9.jpg")
+    srcImg = cv2.imread("resources\\8.jpg")
+    srcImg2 = cv2.imread("resources\\9.jpg")
     dstImg = mixed_img(srcImg,srcImg2,0.7,0.3)
     tmp = np.hstack((srcImg,srcImg2))
     display = np.hstack((tmp, dstImg))
     cv2.imshow("display",display)
-    cv2.imwrite("E:\\tuwee\\imgaug\\resources\\mix.jpg",display)
+    cv2.imwrite("resources\\mix.jpg",display)
     cv2.waitKey(0)
